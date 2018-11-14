@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h1>{{ poll.subject }}</h1>
+<ul>
+    {% for option in options %}
+    <li><a href="/option/{{option.id}}">{{ option.title }}</a>: {{ option.count}}</li>
+    {% endfor %}
+</ul>
+{% endblock %}
